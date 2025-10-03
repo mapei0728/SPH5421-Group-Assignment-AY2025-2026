@@ -1,6 +1,6 @@
 # check distancing 
 # obtain the parameters from gt_ver 2
-source("gt_vaccination_plot.R")
+source("gt_main_parm_vaccination_plot.R")
 
 seird_user_ode_distancing <- odin::odin({
   deriv(S) <- -beta_eff * S * (I_R + I_D) / N
