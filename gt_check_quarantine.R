@@ -1,6 +1,6 @@
 # this is for checking the quarantine
 # obtain the parameters from gt_ver 2
-source("gt_vaccination_plot.R")
+source("gt_main_parm_vaccination_plot.R")
 ### then is the quarantine
 # assume we capture and quarantine(securely) x % Exposed individuals
 ###### SEIRDQ
