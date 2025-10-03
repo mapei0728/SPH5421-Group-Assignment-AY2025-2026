@@ -138,3 +138,4 @@ plot_ly(data = all_results,
            yaxis = list(title = "Quarantine Effectiveness"),
            zaxis = list(title = "Final Deaths")
          ))
+
