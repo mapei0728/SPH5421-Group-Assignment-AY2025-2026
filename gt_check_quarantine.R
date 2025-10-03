@@ -17,7 +17,7 @@ seirdq_user_ode <- odin::odin({
   deriv(C) <- beta * S * (I_R + I_D) / N      # cumulative infections
   initial(C) <- 0
   
-  N <- 6e5 # S + E + I_R + I_D + R #+ D + Q_R + Q_D
+  N <-  S + E + I_R + I_D + R #+ D + Q_R + Q_D
   
   initial(S) <- N_ini - I_ini
   initial(E) <- 0
@@ -81,7 +81,7 @@ seirdq_user_ode <- odin::odin({
   initial(C) <- 0
   
   ## Population
-  N <- S + E + I_R + I_D + R + Q_R + Q_D 
+  N <- S + E + I_R + I_D + R # + Q_R + Q_D 
   
   ## -------- Initial conditions --------
   initial(S)   <- N_ini - I_ini
@@ -148,4 +148,4 @@ result_df[600,]$D
 max(result_df$I_R + result_df$I_D)
 which((result_df$I_R + result_df$I_D) == max(result_df$I_R + result_df$I_D))
 
-
+# while compared with previous one this one basically yields very similar result
